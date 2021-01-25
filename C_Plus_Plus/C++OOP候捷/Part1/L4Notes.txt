@@ -1,0 +1,48 @@
+构造函数一般放置在public里，因为外部创建对象时需要调用。
+但是，构造函数可以放入private里，从而引出一种设计模式 Singleton 单例模式
+Object只能有一份！所以一般使用static的一个public函数调用private的构造函数（我也说不清楚，等以后学设计模式再）
+单例模式，菜鸟变成讲解 https://www.runoob.com/design-pattern/singleton-pattern.html
+
+
+
+
+const member functions（常量成员函数）
+1.不改变class内部的数据内容！
+2.(重点！！！）如果不加 const 在member function后，对编译器而言！这个函数是可能改变Object内部的数据的！这个知识的应用点在于，我们使用Object的时候可能会创建 const ClassName Object。这时候，如果我们使用 const Object调用非const member function，会发生错误！
+
+
+
+参数传递
+值传递(Pass by Value)和引用传递(Pass by Reference(to const))
+1.引用在底层上相当于指针！
+2.加const是同时满足效率要求（引用占用更小）和不可更改性（const限定）
+3.如果特别追求性能，对于一些小子节的变量（char？bool？）可以不使用引用传递，使用值传递反而更快！
+
+
+返回值传递
+返回值（return by value）和返回引用（return by reference（to const））
+1.返回值也尽量返回引用。但是注意尽量（当然是因为，如果传入的对象里没有使用reference，一般无法返回reference，因为函数内部创建的对象即使被引用，在函数调用结束后，新创建的对象会被释放内存，所以导致引用没有指向的内容，导致错误）
+
+
+
+友元（friend）
+1.friend函数或friend类可以直接访问到类的私有成员private
+2.(重点概念！！！)相同的class类型的各个Objects之间互为友元（friends）。这解释了，为什么member functions里面我们可以直接访问传入的Object的私有成员！！！
+
+
+
+
+老师的建议：
+1.数据都在private
+2.参数数据最好都用reference传递，const自己决定
+3.返回值也尽量使用reference传递，但是是尽量，而不是一定
+4.member functions是否设定为const，该加的一定要加，否则class users使用函数可能会报错！！！比如用户创建了一个const Object想调用某个不会改变Object data的却没有家const的函数，就会报错
+5.尽量使用initialization list
+
+
+
+
+
+
+
+

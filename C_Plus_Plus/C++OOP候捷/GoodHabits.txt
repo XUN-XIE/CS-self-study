@@ -1,0 +1,51 @@
+老师的建议：
+1.数据都在private
+2.参数数据最好都用reference传递，const自己决定
+3.返回值也尽量使用reference传递，但是是尽量，而不是一定
+4.member functions是否设定为const，该加的一定要加，否则class users使用函数可能会
+报错！！！比如用户创建了一个const Object想调用某个不会改变Object data的却没有家const的函数，就会报错
+5.尽量使用initialization list
+6.有事没事给mamber functions 加一个inline，能不能编译成inline看编译器，但是我们应该有推荐给编译器的习惯！！！
+7.以后在类外定义函数的时候，返回类型单写一行，函数名在第二行开头，这样方便查找对应的函数名！！！
+8.检测自我赋值养成好习惯还是直接显式判断this和传入的Object地址是否相等来看是否为自我赋值
+
+
+
+知识点（新学的重要点）
+const member functions（常量成员函数）
+1.不改变class内部的数据内容！
+2.(重点！！！）如果不加 const 在member function后，对编译器而言！这个函数是可能>改变Object内部的数据的！这个知识的应用点在于，我们使用Object的时候可能会创建 const ClassName Object。这时候，如果我们使用 const Object调用非const member function，会发生错误！
+
+友元（friend）
+1.friend函数或friend类可以直接访问到类的私有成员private
+2.(重点概念！！！)相同的class类型的各个Objects之间互为友元（friends）。这解释了>，为什么member functions里面我们可以直接访问传入的Object的私有成员！！！
+
+
+Stack and Heap(栈和堆)
+一般使用new 创建class Object时。编译器机制
+1.先分配memory，再调用构造函数！
+2.（重点！！！）new是一个operator！！！内部调用的是C的malloc函数！！！
+3.第二步是 转型！ static_cast 类的调用。 pc = static_cast<ClassName*>(ClassData)
+4.最后一步调用构造函数。 pc->ClassName::ClassName(params)
+
+
+delete释放内存的编译器机制
+1.先调用析构函数，再释放内存
+2.第一步先调用析构函数。ClassName::~ClassName(ps)
+3.delete也是一个operator！！！应该是调用了C里的 free 函数
+
+
+---------------------------------Mention---------------------------------------
+malloc和free的内部机制（没有（C++）书去讲解，应该是操作系统可以讲）
+得参考计算机组成原理和操作系统
+参见视频（课程P8内存，栈，堆对应的部分 24min开始）
+
+动态分配所得的array
+array new 和 array delete的存在！！！
+参见视频（紧跟在上面的内容）
+1.delete [] variable。加【】是因为调用了对应数组长度次数的析构函数！比如数组长度为3，调用3次析构函数！
+2.所以如果不写【】，则delete只会调用一次，不会删除整个数组中的Object！！！
+
+
+
+

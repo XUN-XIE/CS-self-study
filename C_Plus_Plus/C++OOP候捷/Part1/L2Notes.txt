@@ -1,0 +1,19 @@
+区分C和C++OOP的却别
+C中数据和函数分开，函数用来处理数据
+C++中class里数据和函数放在一起，函数只能用来处理连带的数据，数据不能被外部使用
+
+区分class带pointer data和不带pointer data
+
+再次重申Object Based 和 Object Oriented的区别
+
+
+防卫式声明：讲解头文件的写法（防止重定义的写法）
+#ifndef XXXX
+#define XXXX
+……
+#endif
+
+
+
+
+

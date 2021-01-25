@@ -1,0 +1,45 @@
+Stack(栈) Heap(堆)
+
+Stack是存在于某作用域（scope）内的一块内存空间（memory space）。比如调用函数时，函数本身会形成一个stack放置它接收的参数，以及返回地址
+在函数本体（function body）内声明的任何变量，其使用的内存块都来自于上述的stack
+
+
+Heap（System Heap）是指由操作系统提供的一块global内存空间，程序可动态分配（dynamic allocated）从中获得若干去块（blocks）
+
+
+1.Stack Object生命在其作用域（scope）内。也被称为auto object，因为会被自动释放内存
+2.static object，其生命在作用域结束后仍然存在，只要等到程序结束时，static object才会自动释放内存
+3.global object，生命也是在程序结束后才自动释放内存，也可以视为一种static object
+4.heap object，只会在被delete时，生命才会结束！！！所以必须在对应的作用域内进行delete，否则指针变量超出作用域后，我们无法访问到指针变量，因而无法delete指针指向的对象
+
+
+一般使用new 创建class Object时。编译器机制
+1.先分配memory，再调用构造函数！
+2.（重点！！！）new是一个operator！！！内部调用的是C的malloc函数！！！
+3.第二步是 转型！ static_cast 类的调用。 pc = static_cast<ClassName*>(ClassData)
+4.最后一步调用构造函数。 pc->ClassName::ClassName(params)
+
+
+delete释放内存的编译器机制
+1.先调用析构函数，再释放内存
+2.第一步先调用析构函数。ClassName::~ClassName(ps)
+3.delete也是一个operator！！！应该是调用了C里的 free 函数
+
+
+---------------------------------Mention---------------------------------------
+malloc和free的内部机制（没有（C++）书去讲解，应该是操作系统可以讲）
+得参考计算机组成原理和操作系统
+参见视频（P8内存，栈，堆对应的部分 24min开始）
+
+
+
+动态分配所得的array
+array new 和 array delete的存在！！！
+参见视频（紧跟在上面的内容）
+1.delete [] variable。加【】是因为调用了对应数组长度次数的析构函数！比如数组长度为3，调用3次析构函数！
+2.所以如果不写【】，则delete只会调用一次，不会删除整个数组中的Object！！！
+
+
+
+
+

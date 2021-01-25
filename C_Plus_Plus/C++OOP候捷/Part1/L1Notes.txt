@@ -1,0 +1,34 @@
+Lecture1
+课程学习目的：
+1.培养正规的，大气的变成习惯。即使是小程序，也有大家的风范
+2.良好的习惯写C++ class
+
+class 分类：(Object Based基于对象（只使用一个class）)
+1.class without pointer members
+2.class with pointer members
+
+学习Classes之间的关系（Object Oriented（面对对象））
+1.继承（Inheritance）
+2.符合（composition）
+3.委托（delegation）
+
+课程总体以以上两大块进行学习，先学习Object Base给单个class编写打好基础，然后再讨论Object Oriented，处理classes之间的关系
+
+
+课程导向信息:
+课程以C++98为主导向（注重基础）而不是C++11，因为课程是2015年录制的
+课程主要讲解C++语言部分，不讲解C++ STL！！！
+
+推荐书籍
+C++ Primer是写第一个编译器的人写的
+Effective C++
+The C++ standard Library
+STL源码剖析
+
+
+
+
+
+
+
+

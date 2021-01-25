@@ -1,0 +1,94 @@
+OOB三个核心概念：
+Data Abstraction, Inheritance, Dynamic Binding
+
+Chapter15.2 Defining Base and Derived Classes
+Base Class知识点
+1.定义base Class时，一般要定义Virtual Destructor，即使不需要也要定义为default
+2.需要被子类重载的member function需要在类声明中，加上virtual关键字，但是不需要在member function定义时再加一遍
+3.父类中的虚函数会被自动（隐式）继承到子类中
+4.子类可以访问父类public，protected，不能访问父类private
+
+
+Derived Class知识点
+1.class derivation list （形式 DerivedClass : public BaseClass1, protected BaseClass2, private BaseClass3）
+2.重载的虚函数，需要在末尾加上override关键字
+3.本章节只讨论单一继承（继承列表只有一个父类）
+4.如果子类中不对父类的虚函数进行重载（不加override），则子类直接继承该虚函数
+5.针对数据成分，子类会直接获得和父类相同的数据成分再加上自己新定义的额外数据
+6.derived-to-base conversion！是指可以使用一个子类的Object像使用父类Object一样
+7.Copy Control子类的constructor里需要显式的调用父类的constructor来初始化从父类继承来的数据成分
+8.static member在整个继承流程内，只有一个！！！一个！！！
+9.子类的声明，和正常类声明一样，不需要加上class derivation list
+10.final关键字加在类定义名字后可以防止该类被继承
+
+
+
+
+Chapter15.2.3Conversions and Inheritance
+需要重点理解，因为对使用很重要
+1.一般的讲，引用和指针的类型和被引用和被指向的对象类型应该一致。但是！在类继承中却不一样。我们可以使用父类类型的引用或指针，指向子类的对象(BaseClass * p = & DerivedClassObject, BaseClass & r = DerivedClassObject)
+2.引出的很重要的意义：当我们使用父类的指针或者引用时，我们并不知道隐藏在背后的真实Object是什么类型(可能是父类，也可能是子类)
+3.static type在编译时，dynamic type在运行时。例子参见书本。按照函数定义（传入参数）变量是static type（一般指引用或者指针），但是它在内存中实际指向的对象却是dynamic type（可能发生conversion）。并且无法改变这个对象（dynamic type）的类型
+4.简单的来说，就是子类可以转换为父类，但是父类不能转换为子类。因为子类本身包含了父类。一个小注意点，在显式赋值时，有点儿颠倒，只存在形式为 BaseClss *(&) p = DerivedClassObject  这才是发生了右面的子类转换为左面的子类（反过来写不对）
+5.转换只能发生于引用或者指针，一般不发生于Object本身的转换（因为发生的内存机制可能并不是我们所期望的）。解释内部机制：在对父类进行赋值或者构造时，实际上是调用了父类的构造函数或者赋值函数。因此，如果我们传入子类进行对父类赋值，则会把子类传入父类的相应函数，然后父类的对应函数只会使用子类中的父类部分进行函数的调用。		继续解释为什么不是我们所期望的：因为一般我们希望子类对象传递给父类变量后，这个看起来是父类的变量可以被当作是子类一样使用，但是根据上述解释，这是行不通的
+
+
+
+
+Chapter15.3 Virtual Functions
+1.虚函数必须被定义，不管是否有实际调用。因为存在conversion，导致编译器只有在运行时才知道哪个类的虚函数被调用，所以必须定义虚函数
+2.dynamic binding 只会发生在 虚函数被指针或引用的变量调用，实际的虚函数是由dynamic type决定的（因此在运行时才能判断使用哪个虚函数）
+3.子类中被重载的虚函数不需要加virtual关键字，因为父类中的虚函数会被自动（隐式）继承到子类中
+4.重载的虚函数，参数类标必须和父类完全一致，但是有一个例外，就是虚函数返回类型为类本身的指针或引用时！（因为此时父类返回父类指针引用，子类返回子类指针引用）
+5.override关键字的作用，可以帮助编译器帮助我们检查子类的虚函数正在重载父类的虚函数（参数列表必须一致）。原因是：其实可以在子类中定义一个看似重载虚函数的函数，这个函数的参数列表不同于父类的虚函数。因此可知，其实这个函数并没有重载父类的虚函数，所以加上override可以让我们自己明确自己正在重载虚函数，又可以让编译器帮助我们检查重载的过程。
+6.final关键字，我们可以在父类的函数名行最后加上final，表示这个函数不能被重载
+7.关键默认参数，在dynamic binding中子类虚函数调用会自动使用父类虚函数的默认参数进行初始化参数。最佳实践是在父类和子类的虚函数中使用相同的默认参数
+8.规避虚函数机制（规避dynamic binding）。使用scope operator（::）强制调用需要的虚函数。至于需要规避的原因：子类虚函数可能会需要明确指明调用父类的虚函数（只完成基本任务，而不是子类的额外任务，如果不加scope opertor，会导致无限递归调用子类的虚函数）。（见书本warning）
+
+
+
+
+
+Chapter15.4Abstract Base Classes(和重构(refactoring)有关系！！！)
+1.Pure Virtual。当我们定义一个抽象基类时，其中的虚函数是没有意义的，不会被使用的，所以我们强制其为无法调用的，使用pure virtual概念
+2.实现pure virtual方法为，在类中函数声明最后加上 = 0 即可
+3.定义了pure virtual function的类就是抽象基类。并且我们不能使用抽象基类创建Object
+
+
+
+
+
+Chapter15.5Access Control and Inheritance
+1.protected members。可以被子类访问，但是不能被其他类或者用户访问（相当于正常的private但是加上了对子类的public）
+2.protected members最重要的一点。子类members和friend只能通过子类对象访问protected members，但是子类没有特殊权限访问protected members。解释，就是子类中，不能直接使用父类的protected members，但是可以通过定义子类的对象，然后利用子类对象去访问protected members
+3.public, private, protected Inheritance。 在继承时，写在Class Derivation List里的内容。在这里要区分一下两个权限，一个时子类使用父类的权限，一个是外部使用子类的权限。子类使用父类的权限是被子类内部的ppp specifier控制的，外部（users）使用子类的权限是Derivation access specifer（Class Derivation List）控制的（相当于把父类的数据放在子类的对应ppp里！）。注意区分
+4.注意friend和权限和member function是一致的！
+5.子父类转换的权限：（比较复杂）第一点：用户级（Users）如果要实现conversion，那么子类必须是public inherited from父类。第二点，子类members function and friends都可以直接使用conversion，不管怎么继承。第三点：子类的子类如果要使用conversion to Base，那么子类不能是private inherited from父类
+6.friendship and inheritance。friend只能针对当前这个class，无论是父类还是子类，它没有权限访问来自于继承的数据
+7.改变特定的被继承数据的权限。使用using关键字
+8.默认的继承权限（其实不重要）。class DerivedClass: (private) BaseClass（使用的默认权限是private）。struct DerivedClass: (public) BaseClass （使用的默认权限是public）。 这个默认机制和定义class和struct一样的，如果在定义内不写private和public，class默认为private，struct默认为public
+
+
+
+
+
+
+Chapter15.6Class Scope under Inheritance
+1.子类的作用域（scope）被嵌套（nested）在父类的作用域中。解释：因为编译器会首先在inner scope寻找可以使用的函数定义，如果没发现就依次向outer scope进行寻找定义
+2.编译器先根据变量类型（static type）进行搜索是否有对应的函数。如果找到了一个虚函数，那么再根据指向的对象类型（dynamic type）调用对应对象类型的虚函数。所以要注意区分子类中的虚函数和常规函数的调用
+
+
+
+
+
+Chapter15.7Constructors and Copy Control
+1.Virtual Destructor for BaseClass的存在是因为我们会存在dynamic binding的情况，这时需要对dynamic type进行正确的destructor调用！
+2.Virtual Destructor会使得编译器不自动生成默认的move operator
+3.子类的copy control函数需要使用父类的copy control函数
+4.子类的destructor只负责子类相对于父类额外的数据部分的释放，因为父类的数据会被父类的destructor自动调用释放
+
+
+
+
+
+

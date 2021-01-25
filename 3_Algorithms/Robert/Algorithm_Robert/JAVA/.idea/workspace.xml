@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="DISPLAY_NOTIFICATION_POPUP" value="false" />
+    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+    <option name="SCHEME" value="Project" />
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <analyzeAfterCompile>true</analyzeAfterCompile>
+    <toolWindowToFront>false</toolWindowToFront>
+  </component>
+  <component name="ProjectId" id="1ijiJu84GkWAdiwoAIdU2qxRrbX" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showModules" value="false" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowMessages.ShowToolbar" value="false" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pAlgorithms, Part I" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chapter1/Chapter1_4/Exercise11" />
+      <recent name="$PROJECT_DIR$/Chapter1/Chapter1_2" />
+      <recent name="$PROJECT_DIR$/Chapter1" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Chapter3.Chapter3_1.Exercise9" />
+      <recent name="Chapter1.Chapter1_3.Exercise7" />
+      <recent name="Chapter1.Chapter1_3.Exercise1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chapter1/Chapter1_4/知识点" />
+      <recent name="$PROJECT_DIR$/Chapter1/Chapter1_3/知识点" />
+      <recent name="$PROJECT_DIR$/Chapter1/Chapter1_2/知识点" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Chapter3.Chapter3_3.RedBlackBST">
+    <configuration name="BinarySearch" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="BinarySearch" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;tinyW.txt&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1_2.BasicDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.BasicDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="12 31 1999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1_2.Counter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Counter" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="100000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1_2.SmallDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.SmallDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="12 31 1999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_1.Exercise11" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_1.Exercise11" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_1.Exercise13" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_1.Exercise13" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_1.Exercise31" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_1.Exercise31" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="100 0.2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_1.Exercise32" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_1.Exercise32" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="1800 0 1000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_1.Exercise36" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_1.Exercise36" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10000 10000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Accumulator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Accumulator" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="100000000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise1" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise10_VisualCounter_Class.VisualCounter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise10_VisualCounter_Class.VisualCounter" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="1000 50" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise16_Rational_class.Rational" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise16_Rational_class.Rational" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise17_Robust_Rational_class.Rational" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise17_Robust_Rational_class.Rational" />
+      <module name="Algorithms, Part I" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise2" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="3" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise3" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10 0 2000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Exercise4" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Exercise4" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Interface_inheritance.BasicDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Interface_inheritance.BasicDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="31 12 1999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.Interface_inheritance.SmallDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.Interface_inheritance.SmallDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="31 12 1999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.StaticSETofInts" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.StaticSETofInts" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="./Chapter1/Chapter1_2/mediumUF.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.VisualAccumulator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.VisualAccumulator" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="2000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.知识点.BasicDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.知识点.BasicDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10 12 1999" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.知识点.Interface_inheritance.BasicDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.知识点.Interface_inheritance.BasicDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="12 31 19999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_2.知识点.Interface_inheritance.SmallDate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_2.知识点.Interface_inheritance.SmallDate" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="12 31 1999" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise10.InfixToPostfix" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise10.InfixToPostfix" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="1 + 2 ) * 3 - 4 ) * 5- 6 ) ) )" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise11.ResizingArrayQueue" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise11.ResizingArrayQueue" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise12" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise12" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise16" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise16" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Chapter1/Chapter1_3/tinyDAG.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise_linked_list.CircularQueue" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise_linked_list.CircularQueue" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.Exercise_linked_list.LinkedList" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.Exercise_linked_list.LinkedList" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.FixedCapacityStack" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.FixedCapacityStack" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.知识点.Bag" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.知识点.Bag" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.知识点.Queue" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.知识点.Queue" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.知识点.ResizingArrayStack" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.知识点.ResizingArrayStack" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_3.知识点.Stack" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_3.知识点.Stack" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_4.Exercise10.BinarySearchSmall" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_4.Exercise10.BinarySearchSmall" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Chapter1/Chapter1_4/Exercise10/test_Binary.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_4.Exercise11.StaticSETofInts" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_4.Exercise11.StaticSETofInts" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Chapter1/Chapter1_4/Exercise11/mediumUF.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_4.Exercise3.DoublingTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_4.Exercise3.DoublingTest" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_4.Exercise8.TwoEqual" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_4.Exercise8.TwoEqual" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Chapter1/Chapter1_4/知识点/1Mints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter1.Chapter1_4.知识点.ThreeSumFast" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Chapter1_4.知识点.ThreeSumFast" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="Chapter1/Chapter1_4/知识点/1Kints.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.Exercise1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise1" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.Exercise14" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise14" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.Exercise19.FrequencyCounter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise19.FrequencyCounter" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="5 Chapter3/Chapter3_1/leipzig1M.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.Exercise24.BinarySearchST" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise24.BinarySearchST" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.Exercise9.FrequencyCounter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise9.FrequencyCounter" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10 Chapter3/Chapter3_1/tale.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.知识点.BinarySearchST" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.知识点.BinarySearchST" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.知识点.Exercise7" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.Exercise7" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="50" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_1.知识点.FrequencyCounter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_1.知识点.FrequencyCounter" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="10  Chapter3/Chapter3_1/tale.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chapter3.Chapter3_3.RedBlackBST" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.Chapter3_3.RedBlackBST" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloWorld" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="HelloWorld" />
+      <module name="Algorithms, Part I" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <method v="2" />
+    </configuration>
+    <configuration name="edu.princeton.cs.algs4.BinarySearch" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.princeton.cs.algs4.BinarySearch" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="./Chapter1/tinyW.txt &lt; ./Chapter1/tinyT.txt" />
+      <method v="2" />
+    </configuration>
+    <configuration name="edu.princeton.cs.algs4.RandomSeq" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="RandomSeq" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="5 100.0 200.0" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.BinarySearch" />
+      <item itemvalue="Application.Chapter1_2.BasicDate" />
+      <item itemvalue="Application.Chapter1_2.Counter" />
+      <item itemvalue="Application.Chapter1_2.SmallDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_1.Exercise11" />
+      <item itemvalue="Application.Chapter1.Chapter1_1.Exercise13" />
+      <item itemvalue="Application.Chapter1.Chapter1_1.Exercise31" />
+      <item itemvalue="Application.Chapter1.Chapter1_1.Exercise32" />
+      <item itemvalue="Application.Chapter1.Chapter1_1.Exercise36" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Accumulator" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise10_VisualCounter_Class.VisualCounter" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise16_Rational_class.Rational" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise17_Robust_Rational_class.Rational" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise1" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise2" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise3" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Exercise4" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Interface_inheritance.BasicDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.Interface_inheritance.SmallDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.StaticSETofInts" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.VisualAccumulator" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.知识点.BasicDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.知识点.Interface_inheritance.BasicDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_2.知识点.Interface_inheritance.SmallDate" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise10.InfixToPostfix" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise11.ResizingArrayQueue" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise12" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise16" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise_linked_list.CircularQueue" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.Exercise_linked_list.LinkedList" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.FixedCapacityStack" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.知识点.Bag" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.知识点.Queue" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.知识点.ResizingArrayStack" />
+      <item itemvalue="Application.Chapter1.Chapter1_3.知识点.Stack" />
+      <item itemvalue="Application.Chapter1.Chapter1_4.Exercise10.BinarySearchSmall" />
+      <item itemvalue="Application.Chapter1.Chapter1_4.Exercise11.StaticSETofInts" />
+      <item itemvalue="Application.Chapter1.Chapter1_4.Exercise3.DoublingTest" />
+      <item itemvalue="Application.Chapter1.Chapter1_4.Exercise8.TwoEqual" />
+      <item itemvalue="Application.Chapter1.Chapter1_4.知识点.ThreeSumFast" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.Exercise14" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.Exercise19.FrequencyCounter" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.Exercise1" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.Exercise24.BinarySearchST" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.Exercise9.FrequencyCounter" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.知识点.BinarySearchST" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.知识点.Exercise7" />
+      <item itemvalue="Application.Chapter3.Chapter3_1.知识点.FrequencyCounter" />
+      <item itemvalue="Application.Chapter3.Chapter3_3.RedBlackBST" />
+      <item itemvalue="Application.HelloWorld" />
+      <item itemvalue="Application.edu.princeton.cs.algs4.BinarySearch" />
+      <item itemvalue="Application.edu.princeton.cs.algs4.RandomSeq" />
+    </list>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602609134773">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1602609134773" />
+    <state x="558" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603981291779">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="558" y="334" key="#com.intellij.fileTypes.FileTypeChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603981291779" />
+    <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1603981698943">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603981698943" />
+    <state x="610" y="426" width="460" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602585612525">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="610" y="426" width="460" height="205" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1602585612525" />
+    <state x="598" y="402" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602826570674">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="598" y="402" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1602826570674" />
+    <state width="1680" height="171" key="GridCell.Tab.0.bottom" timestamp="1603985433526">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="247" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1602430006242" />
+    <state width="1680" height="171" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1603267777277" />
+    <state width="1680" height="171" key="GridCell.Tab.0.bottom/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603985433526" />
+    <state width="2560" height="247" key="GridCell.Tab.0.bottom/1680.0.2560.1440/0.0.1680.1050@1680.0.2560.1440" timestamp="1602758252444" />
+    <state width="1680" height="247" key="GridCell.Tab.0.bottom/1680.23.2560.1417/0.0.1680.1050@0.0.1680.1050" timestamp="1602588513782" />
+    <state width="1680" height="171" key="GridCell.Tab.0.center" timestamp="1603985433524">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="247" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1602430006241" />
+    <state width="1680" height="171" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1603267777276" />
+    <state width="1680" height="171" key="GridCell.Tab.0.center/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603985433524" />
+    <state width="2560" height="247" key="GridCell.Tab.0.center/1680.0.2560.1440/0.0.1680.1050@1680.0.2560.1440" timestamp="1602758252443" />
+    <state width="1680" height="247" key="GridCell.Tab.0.center/1680.23.2560.1417/0.0.1680.1050@0.0.1680.1050" timestamp="1602588513780" />
+    <state width="1680" height="171" key="GridCell.Tab.0.left" timestamp="1603985433524">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="247" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1602430006240" />
+    <state width="1680" height="171" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1603267777275" />
+    <state width="1680" height="171" key="GridCell.Tab.0.left/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603985433524" />
+    <state width="2560" height="247" key="GridCell.Tab.0.left/1680.0.2560.1440/0.0.1680.1050@1680.0.2560.1440" timestamp="1602758252442" />
+    <state width="1680" height="247" key="GridCell.Tab.0.left/1680.23.2560.1417/0.0.1680.1050@0.0.1680.1050" timestamp="1602588513779" />
+    <state width="1680" height="171" key="GridCell.Tab.0.right" timestamp="1603985433525">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="247" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1602430006242" />
+    <state width="1680" height="171" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1603267777276" />
+    <state width="1680" height="171" key="GridCell.Tab.0.right/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1603985433525" />
+    <state width="2560" height="247" key="GridCell.Tab.0.right/1680.0.2560.1440/0.0.1680.1050@1680.0.2560.1440" timestamp="1602758252444" />
+    <state width="1680" height="247" key="GridCell.Tab.0.right/1680.23.2560.1417/0.0.1680.1050@0.0.1680.1050" timestamp="1602588513781" />
+    <state x="341" y="164" key="SettingsEditor" timestamp="1603260164847">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="341" y="164" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1603260164847" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602677555971">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1602677555971" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.23.2560.1417/0.0.1680.1050@0.0.1680.1050" timestamp="1602489695196" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Chapter1/Chapter1_3/Exercise_linked_list/LinkedList.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

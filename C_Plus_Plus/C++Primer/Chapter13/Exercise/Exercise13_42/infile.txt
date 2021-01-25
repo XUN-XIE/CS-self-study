@@ -1,0 +1,182 @@
+
+Search: 
+ 
+Reference<map>mapfind
+Not logged in
+registerlog in
+
+public member function
+<map>
+std::map::find
+      iterator find (const key_type& k);
+const_iterator find (const key_type& k) const;
+Get iterator to element
+Searches the container for an element with a key equivalent to k and returns an iterator to it if found, otherwise it returns an iterator to map::end.
+
+Two keys are considered equivalent if the container's comparison object returns false reflexively (i.e., no matter the order in which the elements are passed as arguments).
+
+Another member function, map::count, can be used to just check whether a particular key exists.
+
+Parameters
+k
+Key to be searched for.
+Member type key_type is the type of the keys for the elements in the container, defined in map as an alias of its first template parameter (Key).
+
+Return value
+An iterator to the element, if an element with specified key is found, or map::end otherwise.
+
+If the map object is const-qualified, the function returns a const_iterator. Otherwise, it returns an iterator.
+
+Member types iterator and const_iterator are bidirectional iterator types pointing to elements (of type value_type).
+Notice that value_type in map containers is an alias of pair<const key_type, mapped_type>.
+
+Example
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+// map::find
+#include <iostream>
+#include <map>
+
+int main ()
+{
+  std::map<char,int> mymap;
+  std::map<char,int>::iterator it;
+
+  mymap['a']=50;
+  mymap['b']=100;
+  mymap['c']=150;
+  mymap['d']=200;
+
+  it = mymap.find('b');
+  if (it != mymap.end())
+    mymap.erase (it);
+
+  // print content:
+  std::cout << "elements in mymap:" << '\n';
+  std::cout << "a => " << mymap.find('a')->second << '\n';
+  std::cout << "c => " << mymap.find('c')->second << '\n';
+  std::cout << "d => " << mymap.find('d')->second << '\n';
+
+  return 0;
+}
+ Edit & Run
+
+
+Output:
+elements in mymap:
+a => 50
+c => 150
+d => 200
+
+Complexity
+Logarithmic in size.
+
+Iterator validity
+No changes.
+
+Data races
+The container is accessed (neither the const nor the non-const versions modify the container).
+No mapped values are accessed: concurrently accessing or modifying elements is safe.
+
+Exception safety
+Strong guarantee: if an exception is thrown, there are no changes in the container.
+
+See also
+map::operator[]
+Access element (public member function )
+map::count
+Count elements with a specific key (public member function )
+map::lower_bound
+Return iterator to lower bound (public member function )
+map::upper_bound
+Return iterator to upper bound (public member function )
+C++
+Information
+Tutorials
+Reference
+Articles
+Forum
+Reference
+C library:
+Containers:
+<array>
+<deque>
+<forward_list>
+<list>
+<map>
+<queue>
+<set>
+<stack>
+<unordered_map>
+<unordered_set>
+<vector>
+Input/Output:
+Multi-threading:
+Other:
+<map>
+map
+multimap
+map
+map::map
+map::~map
+member functions:
+map::at
+map::begin
+map::cbegin
+map::cend
+map::clear
+map::count
+map::crbegin
+map::crend
+map::emplace
+map::emplace_hint
+map::empty
+map::end
+map::equal_range
+map::erase
+map::find
+map::get_allocator
+map::insert
+map::key_comp
+map::lower_bound
+map::max_size
+map::operator=
+map::operator[]
+map::rbegin
+map::rend
+map::size
+map::swap
+map::upper_bound
+map::value_comp
+non-member overloads:
+relational operators (map)
+swap (map)
+
+ 
+Home page | Privacy policy
+© cplusplus.com, 2000-2020 - All rights reserved - v3.2
+Spotted an error? contact us

@@ -1,0 +1,214 @@
+总论：
+1.单目运算符只有一个参数，双目运算符有两个参数
+2.当重载运算符为class的member function时，this会自动充当第一个参数（隐式）
+3.+，-，*，& 同时具有单目运算和双目运算
+4.重载后的运算符优先级不变
+5.有些运算符不能重载（.，&，&&，||）comma，address-of，logical AND，logical OR
+6.如何确定重载运算符函数是class的member function还是nonmember function （见电子书书P687）
+7.mixed-type expression need nonmember function! (such as "string" + aString", 这里的“string”是const char* 类型，aString是string类型，所以需要nonmember function，因为，member function会自动把operator+的第一个参数默认为this)
+
+
+
+
+
+细节针对每个operator
+
+Chapter14.2 Input and Output Operators
+
+Output Operator(<<)
+函数形式
+ostream & operator<<(ostream &, const ClassName &)
+
+解释
+1.第一个参数为non const，因为我们会改变ostream的对象
+2.第一个参数为reference，因为ostream类型不能被copy！（参见Chapter13）
+3.返回值为ostream加reference是因为，我们需要在外部调用时继续使用该ostream object
+
+注意点:
+1.Output Operator必须为Nonmember Function，否则就会出现 ClassObject << cout的情况
+2.Output Operator必须为friend，因为需要获得访问私有成员的权限
+
+
+
+istream & operator>>(istream &, ClassName &)
+
+解释:
+1.不能在第二个参数上加const，因为我们需要读入数据改变传入的Object
+2.同上ostream
+
+注意点:
+1.需要额外处理文件打开失败的可能性！
+2.同上ostream
+
+
+
+
+
+Chapter14.3 Arithmetic and Relational Operators
+
+总注意点:
+1.nonmember functions，因为需要支持conversions for either left- or right- operand（就是“string” + aString，和aString + “string”）
+2.传入的两个参数为const，因为我们并不想改变Objects的状态
+
+Addition Operator
+函数形式
+ClassName operator+(const ClassName &, const ClassName &)
+
+解释:
+1.返回值为ClassName，是因为返回的是一个新的Object，所以使用copy constructor传出
+
+
+
+
+Equality operator
+函数形式
+bool operator==(const ClassName &, con ClassName &)
+
+解释:
+1.返回值为bool，是因为built-in的相等判断就是返回bool值
+2.定义了想等判断，一般同时也要定义不等判断 operator!=
+
+
+
+
+Chapter14.3.2 Relational Operators（<, >, <=, >=）
+并不给出显示的函数形式，参照上面的Equality Operator写即可。
+注意点:
+1.因为不同的class具有不同的数据，因此如何判断大小需要设计者自己考虑
+
+
+
+
+
+Chapter14.4 Assignment operators
+
+初始化列表的使用
+函数形式
+ClassName & operator=(std::initializer_list<dataType>)
+
+解释:
+1.返回reference为lhs的对象
+
+注意点:
+1.必须为member function
+
+
+
+
+Compound Assignment Operators(+-, -=, *=, /=, .etc)
+
+函数形式
+ClassName & operator+=(const ClassName &)
+
+解释:
+1.该类重载，不必要是member function，但是一般更推荐都定义在class内（member function）
+2.返回值为referenece to lhs
+
+
+
+
+
+Chapter14.5 Subscript Operator
+
+函数形式
+dataType & operator[](size_t)
+const dataType & operator[](size_t n) const
+
+解释:
+1.参数类型为内置类型 size_t 表示标准库中的索引类型
+2.注意const版本的最后加的const，用于确保被索引的Object不能被修改
+
+注意点:
+1.必须是member function
+2.返回值必须是reference to element，这样可以方便后面的使用或者修改对应元素
+3.最好同时定义const和non-const版本的Subscript Operator（一个返回正常的reference，另一个返回const member，使得其不能被修改）
+
+
+
+
+
+Chapter14.6 Increment and Decrement Operators(++, --)
+
+总注意点:
+1.最好是member function
+2.同时定义prefix和postfix Operators
+
+Prefix Version
+函数形式
+ClassName & operator++()
+
+解释:
+1.返回reference类型，因为我们仍然需要处理传入的Object，所以返回lvalue
+
+注意点:
+1.首先要判断使用运算符后，元素所处于的位置是否合理（防止Overflow和Underflow）
+2.既然是Prefix Version，对内部元素也是Prefix built-in operator
+
+
+
+// 学习Postfix Version的实现，可以加深对其的理解
+Postfix Version
+函数形式
+ClassName operator++(int)
+
+解释:
+1.返回值不是reference！！！因为我们使用Postfix，所以要优先进行其他的运算，然后再改变Object的内部元素
+2.参数添加了一个int值，这个值没有任何（相对于使用者）作用！它是用来使编译器区分Prefix Version和Postfix Version
+
+注意点:
+1.不同于Prefix Version，函数内部不需要判断是否Overflow和Underflow，因为这些操作会被后面调用Prefix Version完成
+2.首先要存储current state of Object, 然后对Object调用Prefix Version，然后返回保存的Object
+3.参数列表中的int类型并不被使用，因此我们不会给它设置名字
+
+
+
+
+
+Chapter14.7 Member Access Operators（*，->）
+不给出Notes，因为没看懂它的应用点在哪里
+应用点！在智能指针上，可以使得使用智能指针像一般指针一样！！！ （见候捷的课程 P17或STL里的shared_ptr的实现）
+
+
+
+
+
+Chapter14.8 Function-Call Operator
+
+应用:允许class object能够像调用function一样使用，ClassName(ParametersList)
+注意点:
+1.必须是member function
+2.不同的Function-Call Operators需要不同的参数列表以顺利重载
+
+
+知识点:
+Function Objects: Objects of classes that define the call operator
+
+
+
+
+Chapter14.8.1 Lambdas Are Function Objects
+
+
+
+
+
+
+
+
+额外增加一个运算符重载！取反运算符（-）单目运算符，区别于相减的双目运算符
+函数形式
+ClassName operator-(const ClassName &)
+
+解释
+1.这个设计是不对Object本身进行取反的，而是返回一个取反后的Object，所以返回值类型为ClassName不加reference
+2.参数为const是符合我们的目的，不对对象本身取反，所以不改变该Object。reference只是为了效率
+
+
+多想一想，如果要对Object本身进行取反，那么返回类型就要是reference了！并且传入的参数类型不能加const，而且referecne不单是为了效率，也为了改变Object本身！！！
+
+
+
+
+
+
+

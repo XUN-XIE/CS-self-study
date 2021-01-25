@@ -1,0 +1,89 @@
+五个copy control:
+copy constructor, copy assignment
+destructor
+move constructor, move assignment
+
+
+
+
+
+Copy Constructor:
+函数形式
+ClassName(const ClassName &)
+
+解释:
+1.参数为reference是因为，如果不加reference，相当于传入的Object又会再一次调用该Copy Constructor，导致无限调用该Copy Constructor。
+2.加const单纯是为了防止改变传入的Object
+
+
+
+
+
+Copy Assignment:
+函数形式
+ClassName & operator=(const ClassName &)
+
+解释:
+1.返回为reference，是因为需要返回lvalue reference（而不是传回一个经过copy constructor创建的新Object）！因此，参数为reference是因为返回为reference
+2.避免default constructor 和 destructor的调用
+3.不用加 后置 const的原因是，我们在赋值，必须可以修改，（不可能有const objcet 调用赋值）
+
+注意点：
+1.提示：按照Chapter14的讲解，重载运算符，参数列表第一个会默认为this对象
+2.这里要分为Value-Like Class和Pointer-Like Class。（一般我们自己写的都是Value-Like Class，就是deep copy）所以针对Value-Like Class，一般需要删除传入的Object的指针指向的object，释放内存
+3.注意self-assignment的处理！！！
+
+
+
+
+
+Destructor:
+函数形式
+~ClassName()
+
+只需要记住删除pointer指向的对象（Value-Like Class），其他的没有特别注意点
+
+
+
+
+
+Move Constructor:
+函数形式
+ClassName(ClassName &&) noexcept
+解释：
+1. 传入的参数不加 const 的原因，是因为我们在使用 参数赋值给 this object 后，需要改变参数的内部数据，使得其可以被销毁（毕竟它是个rvalue）
+
+
+注意点：
+1.noexcept需要加上，防止throw exception
+
+
+
+
+
+Move Assignment:
+函数形式
+ClassName & operator=(ClassName &&) noexcept
+
+解释：
+1. 传入的参数不加 const 的原因，是因为我们在使用 参数赋值给 this object 后，需要改变参数的内部数据，使得其可以被销毁（毕竟它是个rvalue）
+2. 不用加 后置 const的原因是，我们在赋值，必须可以修改，（不可能有const objcet 调用赋值）
+
+注意点:
+1.noexcept同上
+2.move assignment和copy assignment的区别。move assignment里对传入的Object不需要直接删除Object中的pointer，只需要赋值为nullptr，传入的Object会自动删除的
+3.self-assignment的问题，也与copy assignment不同，需要显式的判断是否为self-assignment
+
+
+
+
+
+
+
+
+其他小收获：
+1.一个针对Pointer-Like Class的小点，这里是智能指针的一个应用点，使用智能指针会更方便处理（因为用built-in pointer会很麻烦，见书籍知识点 Reference Count Chapter13.2.2）
+
+
+2.针对move constructor的应用点的小收获，来自于Chapter13.5。在写动态存储容器时（就是自带resize的容器），可以使用 move constructor 来转移旧的内容到新开辟的内存中！
+

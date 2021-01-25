@@ -1,0 +1,23 @@
+Chapter16Templates and Gerneric Programming
+总论：OOP和generic Programming的共同点是，在写程序时不知道变量的类型。区别是OOP在运行时才知道变量类型，而Generic Programming则在编译时知道变量类型
+
+Chapter16.1Defining a Template
+1.nontype parameters，并不是以类型为参数作为模版。而是以某个常量作为模版传入函数或类。形式为 template <int(etc.) N>。该使用限制为，用于 nontype parameter 初始化的指必须是constant expression
+2.如果要在模版的基础上加关键字inline和constexpr，则将关键字放在模版参数列表之后，函数体之前。
+3.编写模版需要降低对模版参数类型的要求（比如需要支持比较运算符）。有个特别关键点要注意，写程序要考虑到如果模版初始化的参数为指针类型怎么办！！！（比较自定义比较运算，对指针有意义吗？）
+4.文件组织，templates的声明和定义都要放在header file中
+
+class template
+1.类外部定义members function时，定义前加的tempalte arguments list必须与class template的一致
+2.在类模版内部的scope里，编译器会把类名自动当作模版化的类。即ClassName 直接代替了 ClassName<Type>
+3.结合第二点，当我们在类外部定义member functions时，因为在类模版的scope外，所以类模版的模版参数必须写明，即不能代替
+
+class template and friends
+
+
+
+
+
+
+
+

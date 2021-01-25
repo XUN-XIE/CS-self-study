@@ -1,0 +1,22 @@
+CHIP Zeros {
+    IN in[16], z;
+    OUT out[16];
+
+    PARTS:
+    And(a=in[0], b=z, out=out[0]);
+    And(a=in[1], b=z, out=out[1]);
+    And(a=in[2], b=z, out=out[2]);
+    And(a=in[3], b=z, out=out[3]);
+    And(a=in[4], b=z, out=out[4]);
+    And(a=in[5], b=z, out=out[5]);
+    And(a=in[6], b=z, out=out[6]);
+    And(a=in[7], b=z, out=out[7]);
+    And(a=in[8], b=z, out=out[8]);
+    And(a=in[9], b=z, out=out[9]);
+    And(a=in[10], b=z, out=out[10]);
+    And(a=in[11], b=z, out=out[11]);
+    And(a=in[12], b=z, out=out[12]);
+    And(a=in[13], b=z, out=out[13]);
+    And(a=in[14], b=z, out=out[14]);
+    And(a=in[15], b=z, out=out[15]);
+}

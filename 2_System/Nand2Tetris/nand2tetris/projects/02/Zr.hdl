@@ -1,0 +1,13 @@
+CHIP Zr {
+    IN in[16];
+    OUT out;
+
+    PARTS:
+    Or4(a=in[0], b=in[1], c=in[2], d=in[3], out=out1);
+    Or4(a=in[4], b=in[5], c=in[6], d=in[7], out=out2);
+    Or4(a=in[8], b=in[9], c=in[10], d=in[11], out=out3);
+    Or4(a=in[12], b=in[13], c=in[14], d=in[15], out=out4);
+
+    Or4(a=out1, b=out2, c=out3, d=out4, out=tmpout);
+    Not(in=tmpout, out=out);
+}

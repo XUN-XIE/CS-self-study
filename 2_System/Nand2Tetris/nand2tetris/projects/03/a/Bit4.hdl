@@ -1,0 +1,10 @@
+CHIP Bit4 {
+    IN in[4], load;
+    OUT out[4];
+
+    PARTS:
+    Bit(in=in[0], load=load, out=out[0]);
+    Bit(in=in[1], load=load, out=out[1]);
+    Bit(in=in[2], load=load, out=out[2]);
+    Bit(in=in[3], load=load, out=out[3]);
+}

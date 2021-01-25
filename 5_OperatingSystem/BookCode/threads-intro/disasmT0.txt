@@ -1,0 +1,216 @@
+
+t0:	file format Mach-O 64-bit x86-64
+
+
+Disassembly of section __TEXT,__text:
+
+0000000100003b60 _GetTime:
+100003b60: 55                          	pushq	%rbp
+100003b61: 48 89 e5                    	movq	%rsp, %rbp
+100003b64: 48 83 ec 20                 	subq	$32, %rsp
+100003b68: 31 c0                       	xorl	%eax, %eax
+100003b6a: 89 c6                       	movl	%eax, %esi
+100003b6c: 48 8d 7d f0                 	leaq	-16(%rbp), %rdi
+100003b70: e8 b9 02 00 00              	callq	697 <dyld_stub_binder+0x100003e2e>
+100003b75: 89 45 ec                    	movl	%eax, -20(%rbp)
+100003b78: 83 7d ec 00                 	cmpl	$0, -20(%rbp)
+100003b7c: 0f 94 c1                    	sete	%cl
+100003b7f: 80 f1 ff                    	xorb	$-1, %cl
+100003b82: 80 e1 01                    	andb	$1, %cl
+100003b85: 0f b6 c1                    	movzbl	%cl, %eax
+100003b88: 48 63 d0                    	movslq	%eax, %rdx
+100003b8b: 48 83 fa 00                 	cmpq	$0, %rdx
+100003b8f: 0f 84 1f 00 00 00           	je	31 <_GetTime+0x54>
+100003b95: 48 8d 3d 0c 03 00 00        	leaq	780(%rip), %rdi
+100003b9c: 48 8d 35 0d 03 00 00        	leaq	781(%rip), %rsi
+100003ba3: 48 8d 0d 1a 03 00 00        	leaq	794(%rip), %rcx
+100003baa: ba 0b 00 00 00              	movl	$11, %edx
+100003baf: e8 68 02 00 00              	callq	616 <dyld_stub_binder+0x100003e1c>
+100003bb4: e9 00 00 00 00              	jmp	0 <_GetTime+0x59>
+100003bb9: f2 0f 10 05 df 02 00 00     	movsd	735(%rip), %xmm0
+100003bc1: f2 48 0f 2a 4d f0           	cvtsi2sdq	-16(%rbp), %xmm1
+100003bc7: f2 0f 2a 55 f8              	cvtsi2sdl	-8(%rbp), %xmm2
+100003bcc: f2 0f 5e d0                 	divsd	%xmm0, %xmm2
+100003bd0: f2 0f 58 ca                 	addsd	%xmm2, %xmm1
+100003bd4: 0f 28 c1                    	movaps	%xmm1, %xmm0
+100003bd7: 48 83 c4 20                 	addq	$32, %rsp
+100003bdb: 5d                          	popq	%rbp
+100003bdc: c3                          	retq
+100003bdd: 0f 1f 00                    	nopl	(%rax)
+
+0000000100003be0 _Spin:
+100003be0: 55                          	pushq	%rbp
+100003be1: 48 89 e5                    	movq	%rsp, %rbp
+100003be4: 48 83 ec 10                 	subq	$16, %rsp
+100003be8: 89 7d fc                    	movl	%edi, -4(%rbp)
+100003beb: e8 70 ff ff ff              	callq	-144 <_GetTime>
+100003bf0: f2 0f 11 45 f0              	movsd	%xmm0, -16(%rbp)
+100003bf5: e8 66 ff ff ff              	callq	-154 <_GetTime>
+100003bfa: f2 0f 5c 45 f0              	subsd	-16(%rbp), %xmm0
+100003bff: f2 0f 2a 4d fc              	cvtsi2sdl	-4(%rbp), %xmm1
+100003c04: 66 0f 2e c8                 	ucomisd	%xmm0, %xmm1
+100003c08: 0f 86 05 00 00 00           	jbe	5 <_Spin+0x33>
+100003c0e: e9 e2 ff ff ff              	jmp	-30 <_Spin+0x15>
+100003c13: 48 83 c4 10                 	addq	$16, %rsp
+100003c17: 5d                          	popq	%rbp
+100003c18: c3                          	retq
+100003c19: 0f 1f 80 00 00 00 00        	nopl	(%rax)
+
+0000000100003c20 _mythread:
+100003c20: 55                          	pushq	%rbp
+100003c21: 48 89 e5                    	movq	%rsp, %rbp
+100003c24: 48 83 ec 10                 	subq	$16, %rsp
+100003c28: 48 89 7d f8                 	movq	%rdi, -8(%rbp)
+100003c2c: 48 8b 75 f8                 	movq	-8(%rbp), %rsi
+100003c30: 48 8d 3d 95 02 00 00        	leaq	661(%rip), %rdi
+100003c37: b0 00                       	movb	$0, %al
+100003c39: e8 f6 01 00 00              	callq	502 <dyld_stub_binder+0x100003e34>
+100003c3e: 31 c9                       	xorl	%ecx, %ecx
+100003c40: 89 ca                       	movl	%ecx, %edx
+100003c42: 89 45 f4                    	movl	%eax, -12(%rbp)
+100003c45: 48 89 d0                    	movq	%rdx, %rax
+100003c48: 48 83 c4 10                 	addq	$16, %rsp
+100003c4c: 5d                          	popq	%rbp
+100003c4d: c3                          	retq
+100003c4e: 66 90                       	nop
+
+0000000100003c50 _main:
+100003c50: 55                          	pushq	%rbp
+100003c51: 48 89 e5                    	movq	%rsp, %rbp
+100003c54: 48 83 ec 30                 	subq	$48, %rsp
+100003c58: c7 45 fc 00 00 00 00        	movl	$0, -4(%rbp)
+100003c5f: 89 7d f8                    	movl	%edi, -8(%rbp)
+100003c62: 48 89 75 f0                 	movq	%rsi, -16(%rbp)
+100003c66: 83 7d f8 01                 	cmpl	$1, -8(%rbp)
+100003c6a: 0f 84 27 00 00 00           	je	39 <_main+0x47>
+100003c70: 48 8b 05 89 03 00 00        	movq	905(%rip), %rax
+100003c77: 48 8b 38                    	movq	(%rax), %rdi
+100003c7a: 48 8d 35 4f 02 00 00        	leaq	591(%rip), %rsi
+100003c81: 31 c9                       	xorl	%ecx, %ecx
+100003c83: 88 c8                       	movb	%cl, %al
+100003c85: e8 9e 01 00 00              	callq	414 <dyld_stub_binder+0x100003e28>
+100003c8a: bf 01 00 00 00              	movl	$1, %edi
+100003c8f: 89 45 dc                    	movl	%eax, -36(%rbp)
+100003c92: e8 8b 01 00 00              	callq	395 <dyld_stub_binder+0x100003e22>
+100003c97: 48 8d 3d 3f 02 00 00        	leaq	575(%rip), %rdi
+100003c9e: b0 00                       	movb	$0, %al
+100003ca0: e8 8f 01 00 00              	callq	399 <dyld_stub_binder+0x100003e34>
+100003ca5: 31 c9                       	xorl	%ecx, %ecx
+100003ca7: 89 ce                       	movl	%ecx, %esi
+100003ca9: 48 8d 7d e8                 	leaq	-24(%rbp), %rdi
+100003cad: 48 8d 15 6c ff ff ff        	leaq	-148(%rip), %rdx
+100003cb4: 48 8d 0d 2f 02 00 00        	leaq	559(%rip), %rcx
+100003cbb: 89 45 d8                    	movl	%eax, -40(%rbp)
+100003cbe: e8 77 01 00 00              	callq	375 <dyld_stub_binder+0x100003e3a>
+100003cc3: 83 f8 00                    	cmpl	$0, %eax
+100003cc6: 41 0f 94 c0                 	sete	%r8b
+100003cca: 41 80 f0 ff                 	xorb	$-1, %r8b
+100003cce: 41 80 e0 01                 	andb	$1, %r8b
+100003cd2: 41 0f b6 c0                 	movzbl	%r8b, %eax
+100003cd6: 48 63 c8                    	movslq	%eax, %rcx
+100003cd9: 48 83 f9 00                 	cmpq	$0, %rcx
+100003cdd: 0f 84 1f 00 00 00           	je	31 <_main+0xb2>
+100003ce3: 48 8d 3d 02 02 00 00        	leaq	514(%rip), %rdi
+100003cea: 48 8d 35 00 02 00 00        	leaq	512(%rip), %rsi
+100003cf1: 48 8d 0d fe 01 00 00        	leaq	510(%rip), %rcx
+100003cf8: ba 15 00 00 00              	movl	$21, %edx
+100003cfd: e8 1a 01 00 00              	callq	282 <dyld_stub_binder+0x100003e1c>
+100003d02: e9 00 00 00 00              	jmp	0 <_main+0xb7>
+100003d07: 31 c0                       	xorl	%eax, %eax
+100003d09: 89 c6                       	movl	%eax, %esi
+100003d0b: 48 8d 7d e0                 	leaq	-32(%rbp), %rdi
+100003d0f: 48 8d 15 0a ff ff ff        	leaq	-246(%rip), %rdx
+100003d16: 48 8d 0d 0e 02 00 00        	leaq	526(%rip), %rcx
+100003d1d: e8 18 01 00 00              	callq	280 <dyld_stub_binder+0x100003e3a>
+100003d22: 83 f8 00                    	cmpl	$0, %eax
+100003d25: 41 0f 94 c0                 	sete	%r8b
+100003d29: 41 80 f0 ff                 	xorb	$-1, %r8b
+100003d2d: 41 80 e0 01                 	andb	$1, %r8b
+100003d31: 41 0f b6 c0                 	movzbl	%r8b, %eax
+100003d35: 48 63 c8                    	movslq	%eax, %rcx
+100003d38: 48 83 f9 00                 	cmpq	$0, %rcx
+100003d3c: 0f 84 1f 00 00 00           	je	31 <_main+0x111>
+100003d42: 48 8d 3d a3 01 00 00        	leaq	419(%rip), %rdi
+100003d49: 48 8d 35 a1 01 00 00        	leaq	417(%rip), %rsi
+100003d50: 48 8d 0d d6 01 00 00        	leaq	470(%rip), %rcx
+100003d57: ba 16 00 00 00              	movl	$22, %edx
+100003d5c: e8 bb 00 00 00              	callq	187 <dyld_stub_binder+0x100003e1c>
+100003d61: e9 00 00 00 00              	jmp	0 <_main+0x116>
+100003d66: 31 c0                       	xorl	%eax, %eax
+100003d68: 89 c6                       	movl	%eax, %esi
+100003d6a: 48 8b 7d e8                 	movq	-24(%rbp), %rdi
+100003d6e: e8 cd 00 00 00              	callq	205 <dyld_stub_binder+0x100003e40>
+100003d73: 83 f8 00                    	cmpl	$0, %eax
+100003d76: 0f 94 c1                    	sete	%cl
+100003d79: 80 f1 ff                    	xorb	$-1, %cl
+100003d7c: 80 e1 01                    	andb	$1, %cl
+100003d7f: 0f b6 c1                    	movzbl	%cl, %eax
+100003d82: 48 63 d0                    	movslq	%eax, %rdx
+100003d85: 48 83 fa 00                 	cmpq	$0, %rdx
+100003d89: 0f 84 1f 00 00 00           	je	31 <_main+0x15e>
+100003d8f: 48 8d 3d 56 01 00 00        	leaq	342(%rip), %rdi
+100003d96: 48 8d 35 54 01 00 00        	leaq	340(%rip), %rsi
+100003d9d: 48 8d 0d be 01 00 00        	leaq	446(%rip), %rcx
+100003da4: ba 18 00 00 00              	movl	$24, %edx
+100003da9: e8 6e 00 00 00              	callq	110 <dyld_stub_binder+0x100003e1c>
+100003dae: e9 00 00 00 00              	jmp	0 <_main+0x163>
+100003db3: 31 c0                       	xorl	%eax, %eax
+100003db5: 89 c6                       	movl	%eax, %esi
+100003db7: 48 8b 7d e0                 	movq	-32(%rbp), %rdi
+100003dbb: e8 80 00 00 00              	callq	128 <dyld_stub_binder+0x100003e40>
+100003dc0: 83 f8 00                    	cmpl	$0, %eax
+100003dc3: 0f 94 c1                    	sete	%cl
+100003dc6: 80 f1 ff                    	xorb	$-1, %cl
+100003dc9: 80 e1 01                    	andb	$1, %cl
+100003dcc: 0f b6 c1                    	movzbl	%cl, %eax
+100003dcf: 48 63 d0                    	movslq	%eax, %rdx
+100003dd2: 48 83 fa 00                 	cmpq	$0, %rdx
+100003dd6: 0f 84 1f 00 00 00           	je	31 <_main+0x1ab>
+100003ddc: 48 8d 3d 09 01 00 00        	leaq	265(%rip), %rdi
+100003de3: 48 8d 35 07 01 00 00        	leaq	263(%rip), %rsi
+100003dea: 48 8d 0d 94 01 00 00        	leaq	404(%rip), %rcx
+100003df1: ba 19 00 00 00              	movl	$25, %edx
+100003df6: e8 21 00 00 00              	callq	33 <dyld_stub_binder+0x100003e1c>
+100003dfb: e9 00 00 00 00              	jmp	0 <_main+0x1b0>
+100003e00: 48 8d 3d a1 01 00 00        	leaq	417(%rip), %rdi
+100003e07: b0 00                       	movb	$0, %al
+100003e09: e8 26 00 00 00              	callq	38 <dyld_stub_binder+0x100003e34>
+100003e0e: 31 c9                       	xorl	%ecx, %ecx
+100003e10: 89 45 d4                    	movl	%eax, -44(%rbp)
+100003e13: 89 c8                       	movl	%ecx, %eax
+100003e15: 48 83 c4 30                 	addq	$48, %rsp
+100003e19: 5d                          	popq	%rbp
+100003e1a: c3                          	retq
+
+Disassembly of section __TEXT,__stubs:
+
+0000000100003e1c __stubs:
+100003e1c: ff 25 de 41 00 00           	jmpq	*16862(%rip)
+100003e22: ff 25 e0 41 00 00           	jmpq	*16864(%rip)
+100003e28: ff 25 e2 41 00 00           	jmpq	*16866(%rip)
+100003e2e: ff 25 e4 41 00 00           	jmpq	*16868(%rip)
+100003e34: ff 25 e6 41 00 00           	jmpq	*16870(%rip)
+100003e3a: ff 25 e8 41 00 00           	jmpq	*16872(%rip)
+100003e40: ff 25 ea 41 00 00           	jmpq	*16874(%rip)
+
+Disassembly of section __TEXT,__stub_helper:
+
+0000000100003e48 __stub_helper:
+100003e48: 4c 8d 1d e9 41 00 00        	leaq	16873(%rip), %r11
+100003e4f: 41 53                       	pushq	%r11
+100003e51: ff 25 b1 01 00 00           	jmpq	*433(%rip)
+100003e57: 90                          	nop
+100003e58: 68 00 00 00 00              	pushq	$0
+100003e5d: e9 e6 ff ff ff              	jmp	-26 <__stub_helper>
+100003e62: 68 14 00 00 00              	pushq	$20
+100003e67: e9 dc ff ff ff              	jmp	-36 <__stub_helper>
+100003e6c: 68 20 00 00 00              	pushq	$32
+100003e71: e9 d2 ff ff ff              	jmp	-46 <__stub_helper>
+100003e76: 68 2f 00 00 00              	pushq	$47
+100003e7b: e9 c8 ff ff ff              	jmp	-56 <__stub_helper>
+100003e80: 68 43 00 00 00              	pushq	$67
+100003e85: e9 be ff ff ff              	jmp	-66 <__stub_helper>
+100003e8a: 68 51 00 00 00              	pushq	$81
+100003e8f: e9 b4 ff ff ff              	jmp	-76 <__stub_helper>
+100003e94: 68 67 00 00 00              	pushq	$103
+100003e99: e9 aa ff ff ff              	jmp	-86 <__stub_helper>

@@ -1,0 +1,22 @@
+CHIP Cone {
+    IN n;
+    OUT out[16];
+
+    PARTS:
+    And(a=n, b=n, out=out[0]);
+    And(a=n, b=n, out=out[1]);
+    And(a=n, b=n, out=out[2]);
+    And(a=n, b=n, out=out[3]);
+    And(a=n, b=n, out=out[4]);
+    And(a=n, b=n, out=out[5]);
+    And(a=n, b=n, out=out[6]);
+    And(a=n, b=n, out=out[7]);
+    And(a=n, b=n, out=out[8]);
+    And(a=n, b=n, out=out[9]);
+    And(a=n, b=n, out=out[10]);
+    And(a=n, b=n, out=out[11]);
+    And(a=n, b=n, out=out[12]);
+    And(a=n, b=n, out=out[13]);
+    And(a=n, b=n, out=out[14]);
+    And(a=n, b=n, out=out[15]);
+}

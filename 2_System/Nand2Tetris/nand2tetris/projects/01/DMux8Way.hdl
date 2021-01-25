@@ -1,0 +1,52 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/DMux8Way.hdl
+
+/**
+ * 8-way demultiplexor:
+ * {a, b, c, d, e, f, g, h} = {in, 0, 0, 0, 0, 0, 0, 0} if sel == 000
+ *                            {0, in, 0, 0, 0, 0, 0, 0} if sel == 001
+ *                            etc.
+ *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111
+ */
+
+ /**
+000
+001
+010
+011
+
+100
+101
+110
+111
+ */
+CHIP DMux8Way {
+    IN in, sel[3];
+    OUT a, b, c, d, e, f, g, h;
+
+    PARTS:
+    // Put your code here:
+    Not(in=sel[0], out=not0);
+    Not(in=sel[1], out=not1);
+    Not(in=sel[2], out=not2);
+    
+    And(a=not2, b=in, out=Cabcd);
+    And(a=sel[2], b=in, out=Cefgh);
+
+    And(a=Cabcd, b=not1, out=Cab);
+    And(a=Cabcd, b=sel[1], out=Ccd);
+    And(a=Cefgh, b=not1, out=Cef);
+    And(a=Cefgh, b=sel[1], out=Cgh);
+
+    And(a=Cab, b=not0, out=a);
+    And(a=Cab, b=sel[0], out=b);
+    And(a=Ccd, b=not0, out=c);
+    And(a=Ccd, b=sel[0], out=d);
+    And(a=Cef, b=not0, out=e);
+    And(a=Cef, b=sel[0], out=f);
+    And(a=Cgh, b=not0, out=g);
+    And(a=Cgh, b=sel[0], out=h);
+    
+}

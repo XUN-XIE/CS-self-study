@@ -1,0 +1,14 @@
+CHIP Neg {
+    IN in[16], n;
+    OUT out[16];
+
+    PARTS:
+    Not16(in=in, out=notall);
+    // 建立所有都是 0 或 1 的数组
+    Cone(n=n, out=mode);
+    Not16(in=mode, out=notmode);
+    And16(a=in, b=notmode, out=part1);
+    And16(a=notall, b=mode, out=part2);
+    Or16(a=part1, b=part2, out=out);
+}
+
